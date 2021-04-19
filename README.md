@@ -1,2 +1,3 @@
-# terraform-azurerm-vm-linux
-A module to create a Linux Virtual Machine on Azure using Terraform
+# Azure - Linux VM
+
+A Terraform module to create a Linux Virtual Machine on Azure.

@@ -10,7 +10,7 @@ variable "virtual_machine_size" {
   default     = "Standard_F2"
 }
 
-variable "virtual_machine_admin_username" {
+variable "admin_ssh_key_username" {
   type        = string
   description = "(Required) The username of the local administrator used for the Virtual Machine. Changing this forces a new resource to be created."
   default     = "adminuser"

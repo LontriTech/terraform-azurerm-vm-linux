@@ -21,3 +21,15 @@ variable "admin_ssh_key_public_key_file" {
   description = "(Required) The Public Key which should be used for authentication, which needs to be at least 2048-bit and in ssh-rsa format, taken from a file. Changing this forces a new resource to be created."
   default     = "~/.ssh/id_rsa.pub"
 }
+
+variable "os_disk_caching" {
+  type        = string
+  description = "(Required) The Type of Caching which should be used for the Internal OS Disk. Possible values are None, ReadOnly and ReadWrite."
+  default     = "ReadWrite"
+}
+
+variable "os_disk_storage_account_type" {
+  type        = string
+  description = "(Required) The Type of Storage Account which should back this the Internal OS Disk. Possible values are Standard_LRS, StandardSSD_LRS and Premium_LRS. Changing this forces a new resource to be created."
+  default     = "Standard_LRS"
+}

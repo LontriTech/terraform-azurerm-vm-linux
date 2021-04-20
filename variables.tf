@@ -15,3 +15,9 @@ variable "admin_ssh_key_username" {
   description = "(Required) The username of the local administrator used for the Virtual Machine. Changing this forces a new resource to be created."
   default     = "adminuser"
 }
+
+variable "admin_ssh_key_public_key_file" {
+  type        = string
+  description = "(Required) The Public Key which should be used for authentication, which needs to be at least 2048-bit and in ssh-rsa format, taken from a file. Changing this forces a new resource to be created."
+  default     = "~/.ssh/id_rsa.pub"
+}

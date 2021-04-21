@@ -5,10 +5,10 @@ output "linux_virtual_machine_id" {
 
 output "network_interface_id" {
   description = "ID of the deployed VM's NIC."
-  value       = azurerm_network_interface.network_interface.id
+  value       = azurerm_network_interface.nic.id
 }
 
 output "network_interface_private_ip" {
   description = "Private IP address of the deployed VM's NIC."
-  value       = azurerm_network_interface.network_interface.private_ip_address
+  value       = azurerm_network_interface.nic.private_ip_address
 }

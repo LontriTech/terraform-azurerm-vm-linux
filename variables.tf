@@ -12,6 +12,12 @@ variable "virtual_machine_size" {
 
 variable "admin_ssh_key_username" {
   type        = string
+  description = "(Required) The Username for which this Public SSH Key should be configured. Changing this forces a new resource to be created."
+  default     = "adminuser"
+}
+
+variable "virtual_machine_admin_username" {
+  type        = string
   description = "(Required) The username of the local administrator used for the Virtual Machine. Changing this forces a new resource to be created."
   default     = "adminuser"
 }

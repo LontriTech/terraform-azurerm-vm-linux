@@ -4,6 +4,18 @@ variable "nic_private_ip_address_version" {
   default     = "IPv4"
 }
 
+variable "nic_private_ip_address_allocation" {
+  type        = string
+  description = "(Required) The allocation method used for the Private IP Address. Possible values are Dynamic and Static."
+  default     = "Dynamic"
+}
+
+variable "nic_ip_configuration_name" {
+  type        = string
+  description = "(Required) A name used for this IP Configuration."
+  default     = "internal"
+}
+
 variable "virtual_machine_name" {
   type        = string
   description = "(Required) The name of the Linux Virtual Machine. Changing this forces a new resource to be created."

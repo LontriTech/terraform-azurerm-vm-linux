@@ -18,10 +18,10 @@ resource "azurerm_network_interface" "nic" {
   resource_group_name = data.azurerm_resource_group.resource_group.name
 
   ip_configuration {
-    name                          = "internal"
+    name                          = var.nic_ip_configuration_name
     subnet_id                     = data.azurerm_subnet.subnet.id
     private_ip_address_version    = var.nic_private_ip_address_version
-    private_ip_address_allocation = "Dynamic"
+    private_ip_address_allocation = var.nic_private_ip_address_allocation
   }
 }
 

@@ -29,6 +29,10 @@ resource "azurerm_network_interface" "network_interface" {
   }
 }
 
+locals {
+  os_info = var.os_info == null ? lookup(var.standard_os, var.os_name, var.standard_os["Ubuntu"]) : var.os_info
+}
+
 resource "azurerm_linux_virtual_machine" "virtual_machine" {
   name                = var.virtual_machine_name
   resource_group_name = azurerm_resource_group.resource_group.name
@@ -50,9 +54,9 @@ resource "azurerm_linux_virtual_machine" "virtual_machine" {
   }
 
   source_image_reference {
-    publisher = "Canonical"
-    offer     = "UbuntuServer"
-    sku       = "16.04-LTS"
-    version   = "latest"
+    publisher = local.os_info.publisher
+    offer     = local.os_info.offer
+    sku       = local.os_info.sku
+    version   = local.os_info.version
   }
 }

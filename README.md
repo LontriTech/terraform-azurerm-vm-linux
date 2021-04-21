@@ -4,6 +4,12 @@ A Terraform module to create a Linux Virtual Machine on Azure.
 
 # Usage
 
+## OS Info
+
+To make it easier when declaring which OS should be used, this module has a structure that allows choosing the OS with a single string, the available options are the keys on [os-variables.tf](os-variables.tf), it's also posible to define the block on your own, following the same structure and declaring it under the "os_info" variable.
+
+The default OS is Ubuntu, with details as declared in the first block inside [os-variables.tf](os-variables.tf).
+
 ## Terraform Init
 
 The <code>init</code> command needs to be executed in order to initialize the Terraform Backend, this command uses the backend configuration declared or referenced in the root directory of the module.
@@ -32,7 +38,7 @@ To execute this command referencing the plan file created on the previous step u
 
 <code>terraform apply tfplan</code>
 
-# Official Docs
+# Official Docs / References
 
 ## Modules
 
@@ -51,6 +57,8 @@ To execute this command referencing the plan file created on the previous step u
 
 - [azurerm 2.56.0](https://registry.terraform.io/providers/hashicorp/azurerm/2.56.0)
 - [azurerm latest docs](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs)
+- [terraform-azurerm-compute](https://github.com/Azure/terraform-azurerm-compute)
+- [terraform-azurerm-naming](https://github.com/Azure/terraform-azurerm-naming)
 
 ## Backends
 

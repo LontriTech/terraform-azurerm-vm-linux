@@ -17,8 +17,12 @@ resource "azurerm_subnet" "subnet" {
   address_prefixes     = ["10.0.2.0/24"]
 }
 
+locals {
+  os_info = var.os_info == null ? lookup(var.standard_os, var.os_name, var.standard_os["Ubuntu"]) : var.os_info
+}
+
 resource "azurerm_network_interface" "network_interface" {
-  name                = "example-nic"
+  name                = "${var.virtual_machine_name}-nic"
   location            = azurerm_resource_group.resource_group.location
   resource_group_name = azurerm_resource_group.resource_group.name
 
@@ -27,10 +31,6 @@ resource "azurerm_network_interface" "network_interface" {
     subnet_id                     = azurerm_subnet.subnet.id
     private_ip_address_allocation = "Dynamic"
   }
-}
-
-locals {
-  os_info = var.os_info == null ? lookup(var.standard_os, var.os_name, var.standard_os["Ubuntu"]) : var.os_info
 }
 
 resource "azurerm_linux_virtual_machine" "virtual_machine" {

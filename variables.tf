@@ -1,3 +1,9 @@
+variable "nic_private_ip_address_version" {
+  type        = string
+  description = "(Optional) The IP Version to use. Possible values are IPv4 or IPv6."
+  default     = "IPv4"
+}
+
 variable "virtual_machine_name" {
   type        = string
   description = "(Required) The name of the Linux Virtual Machine. Changing this forces a new resource to be created."

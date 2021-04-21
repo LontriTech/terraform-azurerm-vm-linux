@@ -41,13 +41,13 @@ variable "os_disk_storage_account_type" {
 }
 
 variable "os_name" {
-  type = string
+  type        = string
   description = "(Optional) The name of the desired source image, refers to the values of the os-variables.tf file, ignored when the os_info block is declared as defined bellow."
-  default = "teste"
+  default     = "Ubuntu"
 }
 
 variable "os_info" {
-  type = map
+  type        = map(any)
   description = "(Optional) A map with the source_image_reference values, overwrites the os_name value when declared."
-  default = null
+  default     = null
 }

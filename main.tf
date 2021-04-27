@@ -54,4 +54,8 @@ resource "azurerm_linux_virtual_machine" "virtual_machine" {
     sku       = local.os_info.sku
     version   = local.os_info.version
   }
+
+  depends_on = [
+    azurerm_network_interface.nic,
+  ]
 }

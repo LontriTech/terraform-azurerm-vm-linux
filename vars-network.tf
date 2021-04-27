@@ -17,9 +17,9 @@ variable "enable_ip_forwarding" {
 }
 
 variable "dns_servers" {
-  type = list(string)
+  type        = list(string)
   description = "(Optional) A list of IP Addresses defining the DNS Servers which should be used for this Network Interface."
-  default = null
+  default     = null
 }
 
 # Only certain Virtual Machine sizes are supported for Accelerated Networking - more information can be found in this document: 

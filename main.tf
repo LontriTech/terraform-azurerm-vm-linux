@@ -13,12 +13,12 @@ locals {
 }
 
 resource "azurerm_network_interface" "nic" {
-  name                = "${var.virtual_machine_name}-nic"
-  location            = data.azurerm_resource_group.resource_group.location
-  resource_group_name = data.azurerm_resource_group.resource_group.name
-  enable_ip_forwarding = var.enable_ip_forwarding
+  name                          = "${var.virtual_machine_name}-nic"
+  location                      = data.azurerm_resource_group.resource_group.location
+  resource_group_name           = data.azurerm_resource_group.resource_group.name
+  enable_ip_forwarding          = var.enable_ip_forwarding
   enable_accelerated_networking = var.enable_accelerated_networking
-  dns_servers = var.dns_servers
+  dns_servers                   = var.dns_servers
 
   ip_configuration {
     name                          = var.ip_configuration_name

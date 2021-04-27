@@ -16,6 +16,12 @@ variable "enable_ip_forwarding" {
   default     = false
 }
 
+variable "dns_servers" {
+  type = list(string)
+  description = "(Optional) A list of IP Addresses defining the DNS Servers which should be used for this Network Interface."
+  default = null
+}
+
 # Only certain Virtual Machine sizes are supported for Accelerated Networking - more information can be found in this document: 
 # https://docs.microsoft.com/en-us/azure/virtual-network/create-vm-accelerated-networking-cli
 # To use Accelerated Networking in an Availability Set, the Availability Set must be deployed onto an Accelerated Networking enabled cluster.

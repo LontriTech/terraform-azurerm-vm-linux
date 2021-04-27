@@ -66,4 +66,4 @@ To execute this command referencing the plan file created on the previous step u
 - [azurerm backend configuration](terraform.io/docs/language/settings/backends/azurerm.html)
 
 ## References
-- [aztfmod/terraform-azurerm-caf/modules/compute/virtual_machine]https://github.com/aztfmod/terraform-azurerm-caf/tree/5.3.2/modules/compute/virtual_machine
+- [aztfmod/terraform-azurerm-caf/modules/compute/virtual_machine](https://github.com/aztfmod/terraform-azurerm-caf/tree/5.3.2/modules/compute/virtual_machine)

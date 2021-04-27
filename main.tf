@@ -16,12 +16,14 @@ resource "azurerm_network_interface" "nic" {
   name                = "${var.virtual_machine_name}-nic"
   location            = data.azurerm_resource_group.resource_group.location
   resource_group_name = data.azurerm_resource_group.resource_group.name
+  enable_ip_forwarding = var.enable_ip_forwarding
+  enable_accelerated_networking = var.enable_accelerated_networking
 
   ip_configuration {
-    name                          = var.nic_ip_configuration_name
+    name                          = var.ip_configuration_name
     subnet_id                     = data.azurerm_subnet.subnet.id
-    private_ip_address_version    = var.nic_private_ip_address_version
-    private_ip_address_allocation = var.nic_private_ip_address_allocation
+    private_ip_address_version    = var.private_ip_address_version
+    private_ip_address_allocation = var.private_ip_address_allocation
   }
 }
 

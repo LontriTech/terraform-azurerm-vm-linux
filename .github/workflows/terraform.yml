@@ -2,9 +2,17 @@ name: 'Terraform Format Check'
 
 on:
   push:
+    paths-ignore:
+      - '.github/**'
+      - '.gitignore'
+      - '.terraform.lock.hcl'
+      - 'LICENSE'
+      - 'README.md'
     branches:
     - main
   pull_request:
+    branches:
+    - main
 
 jobs:
   terraform:

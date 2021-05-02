@@ -1,3 +1,15 @@
+variable "virtual_network_name" {
+  type        = string
+  description = "(Required) The name of the Virtual Network used."
+  default     = null
+}
+
+variable "subnet_name" {
+  type        = string
+  description = "(Required) The name of the Subnet used."
+  default     = null
+}
+
 variable "private_ip_address_version" {
   type        = string
   description = "(Optional) The IP Version to use. Possible values are IPv4 or IPv6."

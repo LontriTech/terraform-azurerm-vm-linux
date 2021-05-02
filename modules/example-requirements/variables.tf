@@ -28,8 +28,8 @@ variable "subnet_name" {
   default     = "internal"
 }
 
-variable "subnet_address_prefix" {
-  type        = string
+variable "subnet_address_prefixes" {
+  type        = list(string)
   description = "(Optional) The address prefix for the subnet."
-  default     = "10.0.2.0/24"
+  default     = ["10.0.2.0/24"]
 }

@@ -6,8 +6,9 @@ module "example-vm-linux-basic" {
   virtual_network_name = azurerm_virtual_network.vnet.name
   subnet_name          = azurerm_subnet.subnet.name
   location             = azurerm_resource_group.rg.location
+
   depends_on = [
     azurerm_resource_group.rg,
     azurerm_subnet.subnet,
-    ]
+  ]
 }

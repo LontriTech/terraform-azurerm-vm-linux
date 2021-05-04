@@ -67,3 +67,4 @@ To execute this command referencing the plan file created on the previous step u
 
 ## References
 - [aztfmod/terraform-azurerm-caf/modules/compute/virtual_machine](https://github.com/aztfmod/terraform-azurerm-caf/tree/5.3.2/modules/compute/virtual_machine)
+- [Creating module dependencies in Terraform 0.13](https://medium.com/hashicorp-engineering/creating-module-dependencies-in-terraform-0-13-4322702dac4a)

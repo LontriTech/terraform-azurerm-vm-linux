@@ -38,4 +38,4 @@ jobs:
         # directory with infrastructure code to scan
         directory: ./examples/basic
         framework: terraform
-        log_level: error
+        log_level: ERROR

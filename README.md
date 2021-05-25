@@ -41,7 +41,7 @@ To execute this command referencing the plan file created on the previous step u
 # Examples
 
 ## Basic
-[![Validate Example: Basic](https://github.com/lro17/terraform-azurerm-vm-linux/actions/workflows/validate-example-basic.yml/badge.svg?event=workflow_run)](https://github.com/lro17/terraform-azurerm-vm-linux/actions/workflows/validate-example-basic.yml)
+[![Validate Example: Basic](https://github.com/lro17/terraform-azurerm-vm-linux/actions/workflows/validate-example-basic.yml/badge.svg)](https://github.com/lro17/terraform-azurerm-vm-linux/actions/workflows/validate-example-basic.yml)
 
 # Official Docs / References
 

@@ -38,6 +38,11 @@ To execute this command referencing the plan file created on the previous step u
 
 <code>terraform apply tfplan</code>
 
+# Examples
+
+## Basic
+[![Validate Example: Basic](https://github.com/lro17/terraform-azurerm-vm-linux/actions/workflows/validate-example-basic.yml/badge.svg)](https://github.com/lro17/terraform-azurerm-vm-linux/actions/workflows/validate-example-basic.yml)
+
 # Official Docs / References
 
 ## Modules
